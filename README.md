@@ -7,7 +7,7 @@
 ## 사용 예제
 터미널 창에서 다음과 같이 실행하세요.
 ```sh
-python3 python_keras_vgg_16.py
+python3 keras_vgg_16.py
 ```
 ## 개발 환경 설정
 Python 3.x 버젼과, tensorflow, keras 가 필요합니다.
