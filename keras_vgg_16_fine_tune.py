@@ -59,7 +59,7 @@ shuffle_indexes = shuffled_indexes[0:int(float(0.1*len(X_train)))]
 X_test = X_train[shuffle_indexes, :]
 Y_test = Y_train[shuffle_indexes, :]
 
-np.savetxt('test_shuffled_index_reduced.txt', shuffle_indexes, delimiter = ' ', fmt = '%i')
+np.savetxt('./index/test_shuffled_index_reduced.txt', shuffle_indexes, delimiter = ' ', fmt = '%i')
 
 print('TEST SET INDEX saved')
 
@@ -67,7 +67,7 @@ shuffle_indexes = shuffled_indexes[int(float(0.1 * len(X_train))):len(X_train)]
 X_train = X_train[shuffle_indexes, :]
 Y_train = Y_train[shuffle_indexes, :]
 
-np.savetxt('train_shuffled_index_reduced.txt', shuffle_indexes, delimiter = ' ', fmt = '%i')
+np.savetxt('./index/train_shuffled_index_reduced.txt', shuffle_indexes, delimiter = ' ', fmt = '%i')
 print('TRAIN SET INDEX saved')
 
 
@@ -104,7 +104,7 @@ model.compile(optimizer=SGD(lr=0.0001, momentum = 0.9), loss='categorical_crosse
 
 filepath = 'weights.{epoch:02d}-{val_loss:.2f}.hdf5'
 keras.callbacks.ModelCheckpoint(filepath, monitor='val_loss', verbose = 0, save_best_only = True, period = 1)
-model.save('vgg_16_fine_tune_'+'batchsize_'+str(sgd_batch_size)+'epoch_'+str(sgd_epoch))
+model.save('./model/vgg_16_fine_tune_'+'batchsize_'+str(sgd_batch_size)+'epoch_'+str(sgd_epoch))
 
 
 model.fit(x=X_train, y=Y_train, batch_size= sgd_batch_size, epochs = sgd_epoch, validation_data = (X_test, Y_test))
