@@ -1,5 +1,3 @@
-
-
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras.layers.pooling import MaxPooling2D
@@ -15,14 +13,14 @@ from keras.metrics import top_k_categorical_accuracy
 
 from keras.applications import VGG16, VGG19
 
-
 import os
 import cv2
 import numpy as np
 
+# select GPU number to use
 os.environ["CUDA_VISIBLE_DEVICES"]="3"
-##--data load --##
 
+# select data to train
 image_path = '/datahdd/workdir/donghyun/faster_rcnn_kdh/PascalDataSetReduced/'
 filenumber = 0
 X_train = list()
@@ -46,9 +44,7 @@ while(1):
 
     filenumber += 1
 
-#######################################
-#            SEPARATE DATA            #
-#######################################
+# data separate and shuffle and save indices
 
 X_train = np.array(X_train)
 Y_train = np.array(Y_train)
