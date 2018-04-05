@@ -1,13 +1,19 @@
 # PYTHON KERAS VGG16 
 
 본 프로젝트는 "Very deep convolutional networks for large-scale image recognition" 논문에 있는 아키텍쳐를 Keras를 이용하여 구현하였습니다.
-논문과는 달리 ILSVRC 데이터를 사용하지 않고, PASCAL VOC 데이터만을 이용했으며, 이 때문에 성능이 좋지 않습니다. (~55%)
-Fine tuning 네트워크를 이용하면 보다 향상된 정확도를 얻을 수 있습니다. (~87%)
+논문과는 달리 ILSVRC 데이터를 사용하지 않고, PASCAL VOC 데이터만을 이용했으며, 이 때문에 성능이 좋지 않습니다(~55%).
+Fine tuning 네트워크를 이용하면 보다 향상된 정확도를 얻을 수 있습니다(~87%).
+학습에 필요한 데이터는 https://github.com/henniekim/pascal_voc_data_parsing 에서 만들 수 있습니다.
+
+감사합니다!
 
 This project is Keras implementation of "Very deep convolutional networks for large-scale image recognition" paper.
-I only use PASCAL VOC data, when the author of paper use ILSVRC data, which involves not very good performance (~55%)
+I only use PASCAL VOC data, when the author of paper use ILSVRC data, which involves not very good performance(~55%).
 I also add fine-tuning network, pretrained with ImageNet data.
-You can get far better performance (~87%)
+You can get far better performance(~87%).
+Anyone who want make the training data, you may visit https://github.com/henniekim/pascal_voc_data_parsing 
+
+Thank you!
 
 ## 설치 방법
 
