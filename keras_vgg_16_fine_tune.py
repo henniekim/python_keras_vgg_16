@@ -87,7 +87,7 @@ for layer in base_model.layers:
 
 model.compile(optimizer = 'adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(x=X_train, y=Y_train, batch_size=64, epochs = 10, validation_data = (X_test, Y_test))
+model.fit(x=X_train, y=Y_train, batch_size=64, epochs = 10, verbose = 1, validation_data = (X_test, Y_test))
 
 
 for i, layer in enumerate(base_model.layers):
