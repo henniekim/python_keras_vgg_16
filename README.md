@@ -1,7 +1,7 @@
 # PYTHON KERAS VGG16 
 
 본 프로젝트는 "Very deep convolutional networks for large-scale image recognition" 논문에 있는 아키텍쳐를 Keras를 이용하여 구현하였습니다.
-논문과는 달리 ILSVRC 데이터를 사용하지 않고, PASCAL VOC 데이터만을 이용했으며, 이 때문에 성능이 좋지 않습니다(~55%).
+논문과는 달리 ILSVRC 데이터를 사용하지 않고, PASCAL VOC 데이터만을 이용했으며, 이 때문에 성능의 한계가 있습니다.(~55%).
 Fine tuning 네트워크를 이용하면 보다 향상된 정확도를 얻을 수 있습니다(~87%).
 학습에 필요한 데이터는 https://github.com/henniekim/pascal_voc_data_parsing 에서 만들 수 있습니다.
 
@@ -15,15 +15,15 @@ Anyone who want make the training data, you may visit https://github.com/henniek
 
 Thank you!
 
-## 설치 방법
+## INSTALLATION
 
 별 다른 설치가 필요하지 않습니다.
 복잡한 실행방법을 요하는 코드는 지양합니다.
 
-It's not needed any installation process.
+It doesn't need any installation process.
 I don't like any 'complicated' things.
 
-## 사용 예제
+## USAGE
 터미널 창에서 다음과 같이 실행하세요.
 ```sh
 python3 keras_vgg_16.py
@@ -32,7 +32,7 @@ Fine-tuning architecture를 사용하려면 다음과 같이 실행하세요.
 ```sh
 python3 keras_vgg_16_fine_tune.py
 ```
-## 개발 환경 설정
+## ENVIRONMENT
 Python 3.x 버젼과, tensorflow, keras, opencv 가 필요합니다.
 Pycharm IDE를 사용하였지만, 코드 실행에 특별히 필요하지는 않습니다.
 ```sh
@@ -40,7 +40,7 @@ pip3 install tensorflow
 pip3 install keras
 ```
  
-## 업데이트 내역
+## UPDATE
 
 * 0.0.1
     * Scratch training architecture 추가하였습니다.
@@ -49,12 +49,12 @@ pip3 install keras
 * 0.0.3
     * Inference model을 추가하였습니다. 원하는 이미지를 넣으면 분류 결과를 얻을 수 있습니다.
  
-## 정보
+## INFO
 
 김동현 – seru_s@me.com
 Donghyun Kim / Henniekim
 
-## 라이센스
+## LICENSE
 
 MIT © henniekim
 
